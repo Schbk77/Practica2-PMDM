@@ -2,14 +2,25 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.serj.editortexto" >
 
+    <!-- Permiso de lectura para acceder a la galería de fotos de la memoria externa -->
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+
+    <!-- Permiso de escritura en la memoria externa del dispositivo -->
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <!-- No salta el teclado automáticamente cuando se inicia la aplicación -->
         <activity
             android:name="com.example.serj.editortexto.Principal"
-            android:label="@string/app_name" >
+            android:label="@string/app_name"
+            android:windowSoftInputMode="stateHidden">
+            <!-- El intent-filter nos permite ofrecernos como aplicación
+                 para abrir los archivos de tipo text/plain
+                 y no aparece en el menú de aplicaciones del dispositivo -->
             <intent-filter>
                 <action android:name="android.intent.action.VIEW" />
                 <data android:mimeType="text/plain" />
