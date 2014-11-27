@@ -4,5 +4,7 @@
     <string name="app_name">EditorTexto</string>
     <string name="action_guardar">Guardar texto</string>
     <string name="action_guardarsalir">Guardar y salir</string>
+    <string name="tostada_guardar">Texto guardado</string>
+    <string name="texto_plano">text/plain</string>
 
 </resources>

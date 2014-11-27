@@ -100,7 +100,7 @@ public class Principal extends Activity {
         fw.write(texto);
         fw.close();
         et.requestFocus();
-        Toast.makeText(this, "Texto guardado", Toast.LENGTH_SHORT).show();
+        Toast.makeText(this, getString(R.string.tostada_guardar), Toast.LENGTH_SHORT).show();
     }
 
     public void guardar2() {
@@ -111,7 +111,7 @@ public class Principal extends Activity {
             fw.write(texto);
             fw.close();
             et.requestFocus();
-            Toast.makeText(this, "Texto guardado", Toast.LENGTH_SHORT).show();
+            Toast.makeText(this, getString(R.string.tostada_guardar), Toast.LENGTH_SHORT).show();
         } catch (IOException e) {
             e.printStackTrace();
         }
@@ -123,7 +123,7 @@ public class Principal extends Activity {
 
     public void recogerIntent(Intent intent) {
         // Elige qué hacer dependiendo del tipo de Intent
-        if (intent.getType().equals("text/plain")) {
+        if (intent.getType().equals(getString(R.string.texto_plano))) {
             // Maneja los Intents de tipo text/plain
 
             try {
